@@ -1,67 +1,176 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/dist/style.css">
-	<script src="assets/dist/runtime.js"></script>
-	<script src="assets/dist/script.js"></script>
-	<title>Título del documento</title>
-</head>
-<body>
-	<div class="container mt-4">
-		<div class="jumbotron">
-			<h1 class="display-4">Plantilla de Bootstrap</h1>
-			<p class="lead">Puedes utilizar esta plantilla para iniciar un proyecto con Bootstrap</p>
-			<hr class="my-4">
-			<p>Revisa más información en la página del repositorio.</p>
-			<a href="https://github.com/ead-codigo-2020/bootstrap-starter" class="btn btn-primary btn-lg" role="button">Ver el repositorio</a>
-			<button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#page-modal">Prueba ventana modal</button>
-		</div>
-	</div>
-	<div class="container my-4">
-		<h2 class="display-4">Ejemplo de carrusel</h2>
-		<p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, repudiandae incidunt numquam ab odio laudantium.</p>
-		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-			  <div class="carousel-item active">
-				<img src="https://picsum.photos/seed/1/1110/625" class="d-block w-100" alt="Foto aleatoria">
-			  </div>
-			  <div class="carousel-item">
-				<img src="https://picsum.photos/seed/2/1110/625" class="d-block w-100" alt="Foto aleatoria">
-			  </div>
-			  <div class="carousel-item">
-				<img src="https://picsum.photos/seed/3/1110/625" class="d-block w-100" alt="Foto aleatoria">
-			  </div>
-			</div>
-			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			  <span class="sr-only">Anterior</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			  <span class="sr-only">Siguiente</span>
-			</a>
-		  </div>
-	</div>
-	<div id="page-modal" class="modal fade" tabindex="-1" aria-hidden="true" aria-labelledby="#page-modal__title">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 id="page-modal__title" class="modal-title">Título de la ventana modal</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<p>Este es un ejemplo de ventana modal</p>
-					<p>Sirve para comprobar el funcionamiento de las funcionalidades con javascript</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <!--Estilos-->
+        <link rel="stylesheet" href="styles.css">
+        <!--Tipografía-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="d-flex">
+            <!--SIDEBAR-->
+            <div id="sidebar-container" class="bg-primary">
+                <!--LOGO-->
+                <div class="logo"> 
+                    <a href="index.html"><img src="img/graphql.png" class="mx-auto d-block w-50 mt-4" alt="logo-graphql"></a>
+                </div>
+                <!--MENU-->
+                <div class="menu">
+                    <a href="index.html" class="d-block h5 text-light font-weight-bold mt-5 p-2">Conoce GraphQL</a>
+                    <a href="#seccion-que-es" class="d-block h6 text-light font-weight-normal pl-2">¿Qué es?</a>
+                    <a href="#seccion-que-hace" class="d-block h6 text-light font-weight-normal pl-2">¿Qué hace?</a>
+                    <a href="como-funciona.html" class="d-block h5 text-light font-weight-bold mt-5 p-2">¿Cómo funciona?</a>
+                    <a href="como-funciona.html%20#seccion-lenguaje" class="d-block h6 text-light font-weight-normal pl-2">Lenguaje de consulta</a>
+                    <ul class="list-unstyled components">
+                        <li class="d-block h6 text-light font-weight-normal pl-2 pt-1"><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-light">Sistema de tipos</a>
+                            <ul class="collapse list-unstyled" id="homeSubmenu">
+                                <li><a href="como-funciona.html%20#seccion-schemas" class="d-block h6 text-light font-weight-normal pl-3 pt-2">Schemas</a></li>
+                                <li><a href="como-funciona.html%20#seccion-modificadores" class="d-block h6 text-light font-weight-normal pl-3 pt-2">Modificadores de tipos</a></li>
+                                <li><a href="como-funciona.html%20#seccion-input" class="d-block h6 text-light font-weight-normal pl-3 pt-2">Input Type</a>                                         </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="como-funciona.html%20#seccion-entorno" class="d-block h6 text-light font-weight-normal pl-2">Entorno de tiempo de ejecución</a>
+                </div>
+            </div>
+
+            <!--CONTENIDO PRINCIPAL-->
+            <div id="content" class="p-0"> 
+                <div>
+                    <img src="img/Ilustracion-3.jpeg" class="d-block" alt="ilustracion-3">
+                </div>
+                
+                <!--CONOCE GRAPHQL-->
+                <div id="seccion-conoce" class="container p-5">
+                    <!--TÍTULO PÁGINA-->
+                    <h1 class="font-weight-bold text-center"> Conoce GraphQL</h1>
+                    
+                    <!--¿QUÉ ES?-->
+                    <div class="d-flex row">
+                        <!--INFORMACIÓN-->
+                        <div id="seccion-que-es" class="col">
+                            <h2>¿Qué es?</h2>
+                            <p>GraphQL es un lenguaje de <strong>consulta</strong> para la manipulación de <strong>APIs</strong>. Un lenguaje es un <strong>sistema compartido</strong> por dos partes que les permite comunicarse entre sí. Al carecer de plataforma se puede implementar en más de <strong>20 lenguajes</strong>.</p>
+                            <p>Fue desarrollado por <strong>Facebook</strong> en el año 2012, y posteriormente es liberado en 2015 como proyecto <strong>Open Source</strong>. Finalmente en 2018 es patrocinado por <strong>Linux</strong>.</p>
+                            
+                            <h3 class="font-weight-bold pt-5">¿Qué son y para qué sirven las APIs?</h3>
+                            <p>Son interfaces de programación que permiten la comunicación entre aplicaciones. Si una de las partes envía una solicitud remota con cierta estructura en particular, esa misma estructura determinará cómo responderá el software de la otra parte.</p>
+                            <p>GraphQL es una alternativa a las APIs basadas en el modelo <strong>Rest</strong>.</p>
+                        </div>
+                        <!--IMAGEN-->
+                        <div class="col text-center mt-5">
+                            <img src="img/ilustracion-1.png" alt="ilustración 1">
+                        </div>
+                    </div>
+                </div>
+
+                <!--DIFERENCIAS-->
+                <div class="bg-secundary p-5">
+                    <div id="detalles">
+                        <h3 class=" font-weight-bold">Diferencias entre APIRest y GraphQL</h3>
+                        <div class="d-flex row mt-4">
+                            <div class="col">
+                                <h4 class="font-weight-bold">APIRest</h4>
+                                <p><b>Es solo una convención</b><br>Es una manera de comunicarse entre el servidor y cliente, cada uno tiene sus reglas.</br></p>
+                                <p><b>El servidor expone recursos</b><br>Los clientes tienen que adecuarse a cómo están expuestos.</br></p>
+                                <p><b>Hace overfetching</b><br>Es decir, envía más información de la que se necesita.</br></p>
+                                <p><b>Múltiples request por vista</b><br>Muy costoso en performance, básicamente es una aplicación en blanco que aún no ha cargado datos o tiene custom endpoints.</br></p>
+                                <p><b>Documentación ajena al desarrollo</b><br>No hay un estándar por lo que depende mucho del desarrollador para mantenerla.</br></p>
+                            </div>
+                            <div class="col">
+                                <h4 class="font-weight-bold">GraphQL</h3>
+                                <p><b>Lenguaje tipado y validable</b><br>Le damos una forma de lo que recibe y lo que devolvemos, Además de agregarle seguridad.</br></p>
+                                <p><b>El cliente define qué recibe</b><br>Haciendo una consulta, de la estructura que se define como respuesta.</br></p>
+                                <p><b>Envía lo necesario</b><br>Se tiene control total de las respuestas que se esperan del servidor.</br></p>
+                                <p><b>Hace un solo request por vista</b><br>Se maneja un solo row, prácticamente en solo request puedes mandar todo lo que necesitas.</br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <!--QUIENES USAN GRAPHQL-->
+                <div id="quienes-usan" class="d-flex p-5">
+                    <div class="col w-50">
+                        <h3 class="font-weight-bold">¿Quienes usan GraphQL?</h3>
+                        <p>Está dirgido a servicios y organizaciones de desarrolladores web. Algunos servicios que usan GraphQL son <strong>Facebook, Pinterest, Github y Coursera</strong> entre otros.</p>
+                    </div>
+                    <div class="col d-flex mt-3 logo-cliente">
+                        <img src="img/cliente-1.png" alt="cliente-facebook">
+                        <img src="img/cliente-2.png" alt="cliente-pinterest">
+                        <img src="img/cliente-3.png" alt="cliente-github">
+                        <img src="img/cliente-4.png" alt="cliente-coursera">
+                        <img src="img/cliente-5.png" alt="cliente-intuit">
+                    </div>
+                </div>
+
+                <!--¿QUÉ HACE?-->
+                <div id="seccion-que-hace" class="bg-secundary">
+                    <div class="d-flex row p-5">
+                        <div class="col">
+                            <h2>¿Qué hace?</h2>
+                            <p>Permite hacer <strong>consultas</strong>, esperar una <strong>respuesta predecible</strong> y definir la <strong>estructura de datos</strong> que requieren.</p>
+                            <p>Evita el retorno de cantidades <strong>excesivas</strong> de datos. Es para comunicar <strong>clientes y servidores</strong>.</p>
+                            <p>La principal mejora que propone es la <strong>optimización</strong>, además de trasladar la información <strong>del servidor al cliente</strong>.</p>
+                        </div>
+                        <div class="col mt-3">
+                            <img src="img/ej-interface.png" alt="ejemplo-interface">
+                        </div>
+                    </div>
+                </div>
+                <footer class="bg-primary text-white">
+                    <div id="footer" class="container d-flex row p-5">
+                        <!--NOMBRE ESTUDIANTES-->
+                        <div class="col-3">
+                            <p><strong>ESTUDIANTES</strong></p>
+                            <ul class="list-unstyled">
+                                <li>Constanza Cabrera</li>
+                                <li>María Inés González</li>
+                                <li>Stephany Rojas</li>
+                            </ul>
+                        </div>
+                        <!--NOMBRE PROFESORES-->
+                        <div class="col-3">
+                            <p><strong>PROFESORES</strong></p>
+                            <ul class="list-unstyled">
+                                <li>Basilio Cáceres</li>
+                                <li>Felipe Lavín</li>
+                            </ul>
+                        </div>
+                        <!--TALLER-->
+                        <div class="col-3">
+                            <p><strong>TALLER</strong></p>
+                            <ul class="list-unstyled">
+                                <li>Diseño desde el código</li>
+                                <li>Segundo semestre, 2020</li>
+                            </ul>
+                        </div>
+                        <!--logo-->
+                        <div class="col-3">
+                            <img src="img/eadpucv.png" class="w-100" alt="logo-ead">
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) 
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        </script>-->
+        <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+    </body>
 </html>
